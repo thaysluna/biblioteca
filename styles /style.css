@@ -1,0 +1,136 @@
+/* Configurações Globais */
+:root {
+    --primary-color: #007bff; /* Azul vibrante para botões e links */
+    --secondary-color: #f8f9fa; /* Fundo claro para o corpo */
+    --text-color: #343a40; /* Texto escuro */
+    --light-blue: #e9ecef; /* Cor suave para o fundo da seção principal */
+    --border-color: #ced4da;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header (Navegação) */
+header {
+    background-color: white;
+    box-shadow: var(--box-shadow);
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--primary-color);
+}
+
+/* Main Content (Área Principal) */
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: var(--light-blue); /* Fundo suave para a área de conteúdo */
+}
+
+.loan-container {
+    background: white;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: var(--box-shadow);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+}
+
+.loan-container h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.subtitle {
+    margin-bottom: 25px;
+    color: #6c757d;
+}
+
+/* Formulário */
+.loan-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaço entre os campos */
+}
+
+.loan-form input[type="text"],
+.loan-form input[type="date"] {
+    padding: 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1em;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.loan-form input:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Botão */
+.loan-form button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    margin-top: 10px;
+}
+
+.loan-form button:hover {
+    background-color: #0056b3;
+}
+
+.loan-form button:active {
+    transform: scale(0.99);
+}
+
+/* Footer */
+footer {
+    background-color: var(--text-color);
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9em;
+}
